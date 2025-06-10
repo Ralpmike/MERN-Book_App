@@ -5,6 +5,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import Books from "./routes/Books/book";
 import SingleBook from "./routes/Books/singleBook";
+import CreateBook from "./routes/Books/createBook";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/books" element={<Books />} />
         <Route path="books/:slug" element={<SingleBook />} />
+        <Route path="/createbook" element={<CreateBook />} />
+        <Route path="*" element={<h1>404 Page Not Found</h1>} />
       </Routes>
       <Footer />
     </BrowserRouter>

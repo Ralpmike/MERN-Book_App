@@ -45,6 +45,10 @@ function Books() {
         below is pulled from Mongo database
       </p>
 
+      <Link to="/createbook" className="btn">
+        + Add New Book
+      </Link>
+
       <h2>Book Data sample</h2>
 
       <div className="filters">
