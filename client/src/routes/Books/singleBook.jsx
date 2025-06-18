@@ -9,7 +9,7 @@ function SingleBook() {
   const [bookId, setBookId] = useState("");
   const navigate = useNavigate();
 
-  const baseURL = `http://localhost:8000/api/books/${slug}`;
+  const baseURL = `https://mern-book-app-iota.vercel.app/api/books/${slug}`;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,7 +45,7 @@ function SingleBook() {
     setIsDeleting(true);
     try {
       const response = await fetch(
-        `http://localhost:8000/api/books/${bookId}`,
+        `https://mern-book-app-iota.vercel.app/api/books/${bookId}`,
         {
           method: "DELETE",
         }
@@ -92,7 +92,7 @@ function SingleBook() {
               <div key={book._id} className="bookdetails">
                 <div className="col-2">
                   <img
-                    src={`http://localhost:8000/uploads/${book.thumbnail}`}
+                    src={`https://mern-book-app-iota.vercel.app/uploads/${book.thumbnail}`}
                     alt={book.title}
                   />
                   <br />

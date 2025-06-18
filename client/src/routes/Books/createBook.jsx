@@ -19,15 +19,17 @@ function CreateBook() {
   const navigate = useNavigate();
   const method = slug ? "PUT" : "POST";
   const endpoint = slug
-    ? `http://localhost:8000/api/books/${slug}`
-    : "http://localhost:8000/api/books";
+    ? `https://mern-book-app-iota.vercel.app/api/books/${slug}`
+    : "https://mern-book-app-iota.vercel.app/api/books";
 
   console.log(slug);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(`http://localhost:8000/api/books/${slug}`);
+        const response = await fetch(
+          `https://mern-book-app-iota.vercel.app/api/books/${slug}`
+        );
         const data = await response.json();
         console.log("data", data);
         data.book.map((item) => {
@@ -40,7 +42,9 @@ function CreateBook() {
             category: item.category.join(", "),
           });
           if (item.thumbnail)
-            setImagePreview(`http://localhost:8000/uploads/${item.thumbnail}`);
+            setImagePreview(
+              `https://mern-book-app-iota.vercel.app/uploads/${item.thumbnail}`
+            );
         });
       } catch (error) {
         setMessage(error.message);
