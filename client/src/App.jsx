@@ -17,6 +17,7 @@ function App() {
         <Route path="/books" element={<Books />} />
         <Route path="books/:slug" element={<SingleBook />} />
         <Route path="/createbook" element={<CreateBook />} />
+        <Route path="/editbook/:slug" element={<CreateBook />} />
         <Route path="*" element={<h1>404 Page Not Found</h1>} />
       </Routes>
       <Footer />
