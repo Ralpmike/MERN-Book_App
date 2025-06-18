@@ -83,7 +83,7 @@ function Books() {
               <li key={book._id}>
                 <Link to={`/books/${book.slug}`}>
                   <img
-                    src={`http://localhost:8000/uploads/${book.thumbnail}`}
+                    src={`https://mern-book-app-iota.vercel.app/uploads/${book.thumbnail}`}
                     alt={book.title}
                   />
                 </Link>
