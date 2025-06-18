@@ -12,7 +12,7 @@ const setUpMiddleware = (app) => {
   app.use(express.urlencoded({ extended: true }));
 
   //? serving static files
-  app.use("/uploads", express.static("uploads"));
+  app.use("/uploads", express.static("public/uploads"));
 };
 
 module.exports = setUpMiddleware;
